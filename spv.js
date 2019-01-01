@@ -76,12 +76,12 @@ const spvNode = new bcoin.SPVNode({
   });
 
   spvNode.on('block', (block) => {
+      const blockHash = block.hash('hex');
       if (MerkleBlock.isMerkleBlock(block)) {
-        const blockHash = block.hash('hex');
         fs.writeFileSync(`${__dirname}/block_${blockHash}.json`, JSON.stringify(block.toJSON(), null, 2));
         console.log(`-- SPV node received MERKLEBLOCK: -- ${blockHash}`);
       } else {
-        console.log(`-- SPV node received block: -- ${block.hash}`);
+        console.log(`-- SPV node received block: -- ${blockHash}`);
       }
   });
 
