@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/alessandro-aglietti/udemy-2109810/issues"
   },
-  "homepage": "https://github.com/alessandro-aglietti/udemy-2109810#readme"
+  "homepage": "https://github.com/alessandro-aglietti/udemy-2109810#readme",
+  "dependencies": {
+    "bcoin": "^1.0.2",
+    "p-event": "^2.1.0"
+  }
 }
